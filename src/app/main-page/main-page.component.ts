@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {Router} from '@angular/router';
-import {Feeling} from '../interfaces';
+import { Router } from '@angular/router';
+import { Feeling } from '../interfaces';
 
 @Component({
   selector: 'f-main',
@@ -22,7 +22,8 @@ export class MainPageComponent {
     });
     this.feelingsList.push({
       name: 'Страх',
-      color: '#4F3CC9'
+      color: '#4F3CC9',
+      path: 'fear',
     });
     this.feelingsList.push({
       name: 'Любовь',
@@ -33,14 +34,16 @@ export class MainPageComponent {
     });
     this.feelingsList.push({
       name: 'Грусть',
-      color: '#77E0B5'
+      color: '#77E0B5',
+      path: 'sadness',
     });
     this.feelingsList.push({
       name: null
     });
     this.feelingsList.push({
       name: 'Радость',
-      color: '#B47AFE'
+      color: '#B47AFE',
+      path: 'joy',
     });
   }
 
