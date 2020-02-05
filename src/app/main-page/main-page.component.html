@@ -1,0 +1,26 @@
+  <ul class="hexGrid">
+    <ng-container *ngFor="let feeling of feelingsList; index as i">
+      <li
+        *ngIf="feeling.name !== null"
+        [ngClass]="{'secondRow': i > 3}"
+        class="hex">
+        <div (click)="goToSelector(feeling)" class="hexText">
+          <div style="flex:1"></div>
+          <div class="centeredText" style="flex:auto">
+            {{feeling.name}}
+          </div>
+          <div style="flex:1"></div>
+        </div>
+          <div class="hexIn">
+              <a class="hexLink" href="#" >
+                  <div class = "color" [ngStyle]="{'background-color': feeling.color}">
+                  </div>
+              </a>
+          </div>
+      </li>
+      <li
+        *ngIf="feeling.name === null"
+        class="empty">
+      </li>
+    </ng-container>
+  </ul>
